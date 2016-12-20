@@ -14,3 +14,6 @@ endif()
 if( RAKNET_ENABLE_DLL )
 	add_subdirectory(DLL)
 endif()
+
+FILE(GLOB ALL_HEADER_SRCS ${RakNet_SOURCE_DIR}/Source/*.h)
+INSTALL(FILES ${ALL_HEADER_SRCS} DESTINATION ${CMAKE_PREFIX_PATH}/include/raknet)

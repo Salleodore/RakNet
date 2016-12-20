@@ -40,10 +40,10 @@ using namespace cat;
 #include <cat/time/Clock.hpp>
 
 // Include and link to various Windows libraries needed to collect system info
-#include <Psapi.h>
-#include <Lmcons.h>   // LAN-MAN constants for "UNLEN" username max length
-#include <Iphlpapi.h> // GetAdaptersInfo()
-#include <Process.h>  // _beginthreadex()
+#include <psapi.h>
+#include <lmcons.h>   // LAN-MAN constants for "UNLEN" username max length
+#include <iphlpapi.h> // GetAdaptersInfo()
+#include <process.h>  // _beginthreadex()
 
 #pragma comment(lib, "iphlpapi")
 #pragma comment(lib, "advapi32")

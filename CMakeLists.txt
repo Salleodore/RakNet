@@ -22,6 +22,7 @@ ELSE(WIN32 AND NOT UNIX)
 	set(RAKNET_LIBRARY_LIBS pthread)
 ENDIF(WIN32 AND NOT UNIX)
 
+set(CMAKE_DEBUG_POSTFIX "_d")
 
 # Options
 option( RAKNET_ENABLE_SAMPLES 	"Generate RakNet sample projects if true." 		TRUE  )
@@ -41,7 +42,7 @@ if( RAKNET_GENERATE_INCLUDE_ONLY_DIR )
 	message( STATUS "DONE: Setting up the ${RAKNET_NAMED_INCLUDE_ONLY_DIR} directory." )
 endif()
 
-set( RAKNET_INCLUDE_DIRS ${RAKNETHEADERFILES} ${RAKNET_INCLUDE_ONLY_DIR} PARENT_SCOPE ) # Visible from outside
+set( RAKNET_INCLUDE_DIRS ${RAKNETHEADERFILES} ${RAKNET_INCLUDE_ONLY_DIR} ) # Visible from outside
 
 include(./CmakeIncludes/CmakeMacros.txt)
 FIXLINKOPTIONS()
@@ -53,6 +54,6 @@ add_subdirectory(Lib)
 
 set(RAKNET_COMMON_LIBS RakNetLibStatic)
 
-if( RAKNET_GENERATE_SAMPLES )
+if( RAKNET_ENABLE_SAMPLES )
 	add_subdirectory(Samples)
 endif()

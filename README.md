@@ -1,7 +1,14 @@
-RakNet 4.081
+Larku's fork of RakNet 4.081
 ============
 
 Copyright (c) 2014, Oculus VR, Inc.
+
+Fork notes [updated 27-July-2015]
+------------------------------------------
+
+This fork contains most of the pending pull requests from the official Oculus VR original.
+
+This fork also contains other various fixes that I've found necessary - mostly addressing compilation issues on various platforms.
 
 Package notes
 ------------------------------------------
