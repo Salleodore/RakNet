@@ -12,7 +12,7 @@ endif()
 
 
 if( RAKNET_ENABLE_DLL )
-	add_subdirectory(DLL)
+	#add_subdirectory(DLL)
 endif()
 
 FILE(GLOB ALL_HEADER_SRCS ${RakNet_SOURCE_DIR}/Source/*.h)
