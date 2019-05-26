@@ -376,9 +376,9 @@ void MessageFilter::OnClosedConnection(const SystemAddress &systemAddress, RakNe
 	default:
 		if (packet->data[0]==ID_TIMESTAMP)
 		{
-			if (packet->length<sizeof(MessageID) + sizeof(RakNet::TimeMS))
+			if (packet->length<sizeof(MessageID) + sizeof(RakNet::Time))
 				return RR_STOP_PROCESSING_AND_DEALLOCATE; // Invalid message
-			messageId=packet->data[sizeof(MessageID) + sizeof(RakNet::TimeMS)];
+			messageId=packet->data[sizeof(MessageID) + sizeof(RakNet::Time)];
 		}
 		else
 			messageId=packet->data[0];
